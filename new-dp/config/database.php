@@ -61,6 +61,25 @@ return [
                 PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
             ]) : [],
         ],
+        'dailypharm' => [
+            'driver' => 'mysql',
+            'url' => env('DAILYPHARM_URL'),
+            'host' => env('DAILYPHARM_HOST', '127.0.0.1'),
+            'port' => env('DAILYPHARM_PORT', '3306'),
+            'database' => env('DAILYPHARM_DATABASE', 'laravel'),
+            'username' => env('DAILYPHARM_USERNAME', 'root'),
+            'password' => env('DAILYPHARM_PASSWORD', ''),
+            'unix_socket' => env('DAILYPHARM_SOCKET', ''),
+            'charset' => env('DAILYPHARM_CHARSET', 'latin1'),
+            'collation' => env('DAILYPHARM_COLLATION', 'latin1_general_ci'),
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'strict' => true,
+            'engine' => null,
+            'options' => extension_loaded('pdo_mysql') ? array_filter([
+                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
+            ]) : [],
+        ],
 
         'mariadb' => [
             'driver' => 'mariadb',
