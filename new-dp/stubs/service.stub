@@ -1,0 +1,8 @@
+<?php
+
+namespace App\Services;
+
+class {{ class }}
+{
+    // 서비스 로직을 여기에 작성합니다.
+}

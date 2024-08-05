@@ -2,11 +2,14 @@
 
 namespace Database\Seeders;
 
+use Illuminate\Support\Facades\Hash;
+use App\Services\UserPasswordHash;
 use App\Models\User;
 use App\Models\UserState;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
+
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -14,20 +17,23 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-        $users = DB::connection('dailypharm')->table('Reporter')->where('nDelCode',0)->get();
+        $UserPasswordHash = new UserPasswordHash();
+
+        $users = DB::connection('dailypharm')->table('Reporter')->where('nDelCode', 0)->get();
         foreach ($users as $user) {
-            $user = User::create([
-                'name' => mb_convert_encoding($user->Name,'UTF8','EUC-KR'),
+
+            $hashed_password = Hash::make('epdlfflvka11!');
+
+            $newUser = User::create([
+                'name' => mb_convert_encoding($user->Name, 'UTF8', 'EUC-KR'),
                 'email' => $user->Email,
-                'password' => $user->Passwd,
+                'password' => $hashed_password,
             ]);
 
-            $userState = UserState::create([
-               'user_id' => $user->id,
+            UserState::create([
+                'user_id' => $newUser->id,
                 'active' => true,
             ]);
         }
-
     }
 }
