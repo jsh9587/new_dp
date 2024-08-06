@@ -12,4 +12,10 @@ class UserState extends Model
     protected $table = 'users_state';
 
     protected $fillable = ['user_id', 'active'];
+
+
+    public function User()
+    {
+        return $this->hasOne(User::class, 'user_id', 'id');
+    }
 }

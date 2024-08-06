@@ -44,4 +44,14 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function UserState()
+    {
+        return $this->hasOne(UserState::class);
+    }
+
+    public function UserNickName()
+    {
+        return $this->hasOne(UserNickName::class);
+    }
 }

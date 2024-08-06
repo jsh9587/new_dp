@@ -17,5 +17,7 @@ class UserNickName extends Model
         'created_at'
     ];
 
-
+    public function User(){
+        return $this->hasOne(User::class, 'user_id', 'id');
+    }
 }

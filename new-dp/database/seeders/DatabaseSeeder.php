@@ -3,13 +3,12 @@
 namespace Database\Seeders;
 
 use Illuminate\Support\Facades\Hash;
-use App\Services\UserPasswordHash;
 use App\Models\User;
 use App\Models\UserState;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
-
+use App\Services\Feed\RssService;
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -17,8 +16,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $UserPasswordHash = new UserPasswordHash();
-
         $users = DB::connection('dailypharm')->table('Reporter')->where('nDelCode', 0)->get();
         foreach ($users as $user) {
 
@@ -35,5 +32,8 @@ class DatabaseSeeder extends Seeder
                 'active' => true,
             ]);
         }
+
+        $RssService = new RssService();
+        $RssService->saveFeeds("https://news.google.com/rss?hl=ko&gl=KR&ceid=KR:ko");
     }
 }
