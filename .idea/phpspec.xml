@@ -11,6 +11,9 @@
       <PhpSpecSuiteConfiguration>
         <option name="myPath" value="$PROJECT_DIR$/new-dp" />
       </PhpSpecSuiteConfiguration>
+      <PhpSpecSuiteConfiguration>
+        <option name="myPath" value="$PROJECT_DIR$/new-dp" />
+      </PhpSpecSuiteConfiguration>
     </suites>
   </component>
 </project>

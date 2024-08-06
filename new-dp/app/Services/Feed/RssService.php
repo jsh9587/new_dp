@@ -20,7 +20,10 @@ class RssService
         $feeds = [];
 
         try {
-            $response = Http::get($url);
+            $response = Http::withoutVerifying()->get($url);
+
+            Log::info('HTTP response status: ' . $response->status());
+            Log::info('HTTP response body: ' . $response->body());
 
             if ($response->successful()) {
                 $rss = simplexml_load_string($response->body());
@@ -28,7 +31,7 @@ class RssService
                     foreach ($rss->channel->item as $item) {
                         $feeds[] = [
                             'user_id' => 53,
-                            'type'=>'news',
+                            'type' => 'news',
                             'title' => (string) $item->title,
                             'slug' => (string) $item->guid,
                             'content' => $this->parseContent((string) $item->description),

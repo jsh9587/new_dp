@@ -8,6 +8,7 @@
       <sourceFolder url="file://$MODULE_DIR$/new-dp/tests" isTestSource="true" packagePrefix="Tests\" />
       <sourceFolder url="file://$MODULE_DIR$/new-dp/tests/Feature" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/new-dp/tests/Unit" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/new-dp/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/new-dp/vendor/brick/math" />
@@ -27,10 +28,13 @@
       <excludeFolder url="file://$MODULE_DIR$/new-dp/vendor/guzzlehttp/psr7" />
       <excludeFolder url="file://$MODULE_DIR$/new-dp/vendor/guzzlehttp/uri-template" />
       <excludeFolder url="file://$MODULE_DIR$/new-dp/vendor/hamcrest/hamcrest-php" />
+      <excludeFolder url="file://$MODULE_DIR$/new-dp/vendor/inertiajs/inertia-laravel" />
+      <excludeFolder url="file://$MODULE_DIR$/new-dp/vendor/laravel/breeze" />
       <excludeFolder url="file://$MODULE_DIR$/new-dp/vendor/laravel/framework" />
       <excludeFolder url="file://$MODULE_DIR$/new-dp/vendor/laravel/pint" />
       <excludeFolder url="file://$MODULE_DIR$/new-dp/vendor/laravel/prompts" />
       <excludeFolder url="file://$MODULE_DIR$/new-dp/vendor/laravel/sail" />
+      <excludeFolder url="file://$MODULE_DIR$/new-dp/vendor/laravel/sanctum" />
       <excludeFolder url="file://$MODULE_DIR$/new-dp/vendor/laravel/serializable-closure" />
       <excludeFolder url="file://$MODULE_DIR$/new-dp/vendor/laravel/tinker" />
       <excludeFolder url="file://$MODULE_DIR$/new-dp/vendor/league/commonmark" />
@@ -114,14 +118,11 @@
       <excludeFolder url="file://$MODULE_DIR$/new-dp/vendor/symfony/var-dumper" />
       <excludeFolder url="file://$MODULE_DIR$/new-dp/vendor/symfony/yaml" />
       <excludeFolder url="file://$MODULE_DIR$/new-dp/vendor/theseer/tokenizer" />
+      <excludeFolder url="file://$MODULE_DIR$/new-dp/vendor/tightenco/ziggy" />
       <excludeFolder url="file://$MODULE_DIR$/new-dp/vendor/tijsverkoyen/css-to-inline-styles" />
       <excludeFolder url="file://$MODULE_DIR$/new-dp/vendor/vlucas/phpdotenv" />
       <excludeFolder url="file://$MODULE_DIR$/new-dp/vendor/voku/portable-ascii" />
       <excludeFolder url="file://$MODULE_DIR$/new-dp/vendor/webmozart/assert" />
-      <excludeFolder url="file://$MODULE_DIR$/new-dp/vendor/inertiajs/inertia-laravel" />
-      <excludeFolder url="file://$MODULE_DIR$/new-dp/vendor/laravel/breeze" />
-      <excludeFolder url="file://$MODULE_DIR$/new-dp/vendor/laravel/sanctum" />
-      <excludeFolder url="file://$MODULE_DIR$/new-dp/vendor/tightenco/ziggy" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

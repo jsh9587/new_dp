@@ -14,6 +14,10 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->web(append: [
             \App\Http\Middleware\HandleInertiaRequests::class,
             \Illuminate\Http\Middleware\AddLinkHeadersForPreloadedAssets::class,
+//            \App\Console\Commands\MakeReactComponent::class,
+//            \App\Console\Commands\MakeReactPage::class,
+//            \App\Console\Commands\MakeReactService::class,
+//            \App\Console\Commands\MakeService::class
         ]);
 
         //
