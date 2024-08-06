@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Admin\FeedController;
+use App\Services\Feed\RssService;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -23,6 +24,17 @@ Route::get('/Admin/Feed',function(){
     return Inertia::render('Admin/Feed/index');
 })->middleware(['auth', 'verified'])->name('admin.feed');
 
+Route::get('/Admin/Feed/{id}',function($id){
+    return Inertia::render('Admin/Feed/view',[
+        'id'=>$id
+    ]);
+})->middleware(['auth', 'verified'])->name('admin.feed.view');
+
+Route::get('/Admin/Sns/Store',function(){
+    return Inertia::render('Admin/Feed/store');
+})->middleware(['auth', 'verified'])->name('admin.feed.store');
+
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -31,7 +43,9 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/api/feeds', [FeedController::class, 'getFeeds']);
+Route::get('/api/feeds/{id}', [FeedController::class, 'getFeed']);
+Route::post('/api/feed/store', [FeedController::class, 'store']);
 
-
+Route::get('/api/rss-fetch', [RssService::class, 'saveFeeds']);
 
 require __DIR__.'/auth.php';

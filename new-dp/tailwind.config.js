@@ -15,6 +15,19 @@ export default {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+            maxWidth: {
+                '8xl': '90rem', // 사용자 정의 최대 너비 추가
+                '9xl': '100rem', // 더 큰 최대 너비 추가
+            },
+            gap:{
+                '10': '10px',
+                '30': '30px',
+                '50': '50px',
+            },
+            colors:{
+                'custom-bg':'#e5e7eb'
+            }
+
         },
     },
 

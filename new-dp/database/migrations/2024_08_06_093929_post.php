@@ -15,6 +15,7 @@ return new class extends Migration
         Schema::create('feeds', function (Blueprint $table) {
            $table->id();
            $table->foreignId('user_id')->constrained('users');
+           $table->string('type');
            $table->string('title');
            $table->text('slug');
            $table->text('content');
@@ -29,7 +30,6 @@ return new class extends Migration
     public function down(): void
     {
         //
-        Schema::dropIfExists('posts');
         Schema::dropIfExists('feeds');
     }
 };

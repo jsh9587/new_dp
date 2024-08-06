@@ -34,6 +34,6 @@ class DatabaseSeeder extends Seeder
         }
 
         $RssService = new RssService();
-        $RssService->saveFeeds("https://news.google.com/rss?hl=ko&gl=KR&ceid=KR:ko");
+        $RssService->saveFeeds();
     }
 }

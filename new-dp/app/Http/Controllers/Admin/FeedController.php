@@ -21,4 +21,15 @@ class FeedController extends Controller
         $feeds = $this->feedListService->getFeeds();
         return response()->json($feeds);
     }
+    public function getFeed($id)
+    {
+        $feed = $this->feedListService->getFeed($id);
+        return response()->json($feed);
+    }
+
+    public function store(Request $request)
+    {
+        $feed = $this->feedListService->store($request);
+        return response()->json($feed);
+    }
 }

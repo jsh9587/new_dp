@@ -11,6 +11,7 @@ class Feed extends Model
 
     protected $table = 'feeds';
     protected $fillable = [
+        'type',
         'user_id',
         'title',
         'slug',

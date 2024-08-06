@@ -2,6 +2,7 @@
 
 namespace App\Services\Feed;
 
+use App\Models\Feed;
 use App\Services\Feed\FeedService;
 
 class FeedListService extends FeedService
@@ -13,4 +14,5 @@ class FeedListService extends FeedService
         // 특정 기준에 따라 피드를 필터링합니다.
         return Feed::where('title', 'like', "%{$criteria}%")->get();
     }
+
 }

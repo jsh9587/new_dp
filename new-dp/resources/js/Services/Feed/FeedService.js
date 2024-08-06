@@ -9,7 +9,7 @@ class FeedService {
 
     async getFeeds() {
         try {
-            const response = await this.api.get('/feeds') // Laravel Api Route
+            const response = await this.api.get(`/feeds`) // Laravel Api Route
             return response.data;
         } catch ( error ) {
             console.log('Axios error : ',error);
@@ -17,6 +17,19 @@ class FeedService {
         }
     }
 
+    async getFeed(id) {
+        try{
+            const response = await this.api.get(`/feeds/${id}`);
+            return response.data;
+        } catch ( error ) {
+            console.log('Axios error : ',error);
+            return null;
+        }
+    }
+    async createFeed(feedData) {
+        const response = await axios.post('/api/feed/store', feedData);
+        return response.data;
+    }
 }
 
 export default new FeedService();
