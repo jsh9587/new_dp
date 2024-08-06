@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e9d71ee7-34fc-45e5-81ce-17834dbb405f" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/new_dp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/new_dp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/phpspec.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpspec.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-dp/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/new-dp/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-dp/app/Services/Feed/RssService.php" beforeDir="false" afterPath="$PROJECT_DIR$/new-dp/app/Services/Feed/RssService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-dp/bootstrap/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/new-dp/bootstrap/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-dp/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/new-dp/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-dp/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/new-dp/database/seeders/DatabaseSeeder.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/new-dp/composer.json</pharConfigPath>
+    <execution>
+      <phar pharPath="$PROJECT_DIR$/composer.phar" />
+    </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\Users\User\OneDrive\바탕 화면\DEV\php-8.3.10-Win32-vs16-x64\php.exe">
+    <include_path>
+      <path value="$PROJECT_DIR$/new-dp/vendor/league/commonmark" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/league/config" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/league/flysystem" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/league/flysystem-local" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/league/mime-type-detection" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/filp/whoops" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/sebastian/code-unit" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/sebastian/complexity" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/sebastian/lines-of-code" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/phpunit/php-invoker" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/carbonphp/carbon-doctrine-types" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/nette/schema" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/nette/utils" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/mockery/mockery" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/tightenco/ziggy" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/hamcrest/hamcrest-php" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/psr/clock" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/voku/portable-ascii" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/fruitcake/php-cors" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/guzzlehttp/uri-template" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/symfony/polyfill-php83" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/symfony/uid" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/symfony/clock" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/symfony/mailer" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/symfony/polyfill-uuid" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/dragonmantank/cron-expression" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/fakerphp/faker" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/tijsverkoyen/css-to-inline-styles" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/graham-campbell/result-type" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/composer" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/dflydev/dot-access-data" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/inertiajs/inertia-laravel" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/nunomaduro/collision" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/nunomaduro/termwind" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/brick/math" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/ramsey/collection" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/laravel/breeze" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/laravel/framework" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/laravel/pint" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/laravel/prompts" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/laravel/sail" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/laravel/sanctum" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/laravel/serializable-closure" />
+      <path value="$PROJECT_DIR$/new-dp/vendor/laravel/tinker" />
+    </include_path>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2kHhjbJXUl03EVpAKXGpzjjY1te" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;web.server&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="메인" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner configuration_file="$PROJECT_DIR$/new-dp/phpunit.xml" scope="XML" use_alternative_configuration_file="true" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-PS-241.15989.102" />
+        <option value="bundled-php-predefined-ba97393d7c68-c76157a7178b-com.jetbrains.php.sharedIndexes-PS-241.15989.102" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="e9d71ee7-34fc-45e5-81ce-17834dbb405f" name="변경" comment="" />
+      <created>1722946545208</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1722946545208</updated>
+      <workItem from="1722946546242" duration="332000" />
+      <workItem from="1722946896295" duration="110000" />
+      <workItem from="1722947016935" duration="86000" />
+      <workItem from="1722947112299" duration="332000" />
+      <workItem from="1722947456179" duration="744000" />
+      <workItem from="1722948222018" duration="1362000" />
+      <workItem from="1722949613921" duration="166000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
