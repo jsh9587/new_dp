@@ -22,8 +22,8 @@ class RssService
         try {
             $response = Http::withoutVerifying()->get($url);
 
-            Log::info('HTTP response status: ' . $response->status());
-            Log::info('HTTP response body: ' . $response->body());
+            Log::channel('fetch_rss')->info('HTTP response status: ' . $response->status());
+            Log::channel('fetch_rss')->info('HTTP response body: ' . $response->body());
 
             if ($response->successful()) {
                 $rss = simplexml_load_string($response->body());
@@ -42,10 +42,10 @@ class RssService
                     }
                 }
             } else {
-                Log::error("Failed to fetch RSS feed: " . $response->status());
+                Log::channel('fetch_rss')->error("Failed to fetch RSS feed: " . $response->status());
             }
         } catch (\Exception $e) {
-            Log::error("Error fetching or parsing RSS feed: " . $e->getMessage());
+            Log::channel('fetch_rss')->error("Error fetching or parsing RSS feed: " . $e->getMessage());
         }
 
         return $feeds;

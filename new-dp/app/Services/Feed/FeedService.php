@@ -31,4 +31,5 @@ class FeedService
 
         return response()->json($feed, 201);
     }
+
 }

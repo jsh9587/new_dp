@@ -1,6 +1,6 @@
 import React from 'react';
 
-const News = ({ feed }) => {
+const Feed = ({ feed }) => {
     return (
         <li key={feed.id} className="border border-gray-300 rounded-lg p-4 shadow-md">
             <h3 className="text-xl font-semibold mb-2">{feed.title}</h3>
@@ -22,4 +22,4 @@ const News = ({ feed }) => {
     );
 };
 
-export default News;
+export default Feed;

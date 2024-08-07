@@ -3,20 +3,46 @@ import { Head } from '@inertiajs/react';
 import React, { useState, useEffect } from 'react';
 import FeedService from '@/Services/Feed/FeedService';
 import RssService from "@/Services/Feed/RssService";
-import NewsList from '@/Components/Admin/Feed/NewsList'; // Existing NewsList component
+import FeedList from '@/Components/Admin/Feed/FeedList.jsx'; // Existing FeedList component
 import FetchNewsButton from "@/Components/Admin/Feed/FetchNewsButton";
 import InputSnsButton from "@/Components/Admin/Feed/InputSnsButton";
 import { Inertia } from '@inertiajs/inertia';
 
 
 export default function FeedIndexPage({ auth }) {
+    const [lastFeed, setLastFeed] = useState([]);
     const [feeds, setFeeds] = useState([]);
     const [loading, setLoading] = useState(true); // 로딩 상태 관리
 
     useEffect(() => {
         // Component did mount logic
+
+        lastFetchFeed();
         listData();
     }, []);
+
+    const formatDateWithTimezone = (dateString, timeZone = 'Asia/Seoul') => {
+        const date = new Date(dateString);
+        const year = date.getUTCFullYear();
+        const month = String(date.getUTCMonth() + 1).padStart(2, '0');
+        const day = String(date.getUTCDate()).padStart(2, '0');
+        const hour = String(date.getUTCHours()).padStart(2, '0');
+        const minute = String(date.getUTCMinutes()).padStart(2, '0');
+        const second = String(date.getUTCSeconds()).padStart(2, '0');
+        return `${year}-${month}-${day} ${hour}:${minute}:${second}`;
+    };
+
+    const lastFetchFeed = async ()=> {
+        try {
+            const lastFeed = await FeedService.lastFetchFeed();
+            lastFeed.updated_at = formatDateWithTimezone(lastFeed.updated_at);
+            setLastFeed(lastFeed);
+        } catch ( error ) {
+            console.log(error);
+        } finally {
+            setLoading(false);
+        }
+    }
 
     const listData = async () => {
         try {
@@ -63,22 +89,22 @@ export default function FeedIndexPage({ auth }) {
             <div className="py-12">
                 <div className="max-w-9xl mx-auto sm:px-6 lg:px-8">
                     <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                        <div className="flex gap-10 bg-gray-100">
-                            {/* News Section */}
-                            <div className="w-1/2 p-4 bg-white max-h-screen overflow-y-auto">
+                        <div className="flex flex-col md:flex-row gap-10 bg-gray-100">
+                            {/* Feed Section */}
+                            <div className="w-full md:w-1/2 p-4 bg-white max-h-screen overflow-y-auto">
                                 <div className="flex items-center justify-between mb-4">
-                                    <h3 className="text-2xl font-bold">News</h3>
+                                    <h3 className="text-2xl font-bold">News&nbsp;[{lastFeed.updated_at}]</h3>
                                     <FetchNewsButton onClick={handleFetchNews}/>
                                 </div>
                                 {loading ? (
                                     <div className="text-center text-gray-600">Loading...</div>
                                 ) : (
-                                    <NewsList feeds={newsFeeds}/>
+                                    <FeedList feeds={newsFeeds}/>
                                 )}
                             </div>
 
                             {/* SNS Section */}
-                            <div className="w-1/2 p-4 bg-white max-h-screen overflow-y-auto">
+                            <div className="w-full md:w-1/2 p-4 bg-white max-h-screen overflow-y-auto">
                                 <div className="flex items-center justify-between mb-4">
                                     <h3 className="text-2xl font-bold">SNS</h3>
                                     <InputSnsButton onClick={handleSnsStore}/>
@@ -86,30 +112,7 @@ export default function FeedIndexPage({ auth }) {
                                 {loading ? (
                                     <div className="text-center text-gray-600">Loading...</div>
                                 ) : (
-                                    <ul className="space-y-4">
-                                        {snsFeeds.length > 0 ? (
-                                            snsFeeds.map(feed => (
-                                                <li key={feed.id}
-                                                    className="border border-gray-300 rounded-lg p-4 shadow-md">
-                                                    <h4 className="text-xl font-semibold mb-2">{feed.title}</h4>
-                                                    <div
-                                                        className="text-gray-700 mb-4"
-                                                        dangerouslySetInnerHTML={{__html: feed.content}}
-                                                    />
-                                                    <a
-                                                        href={`/Admin/Feed/${feed.id}`}
-                                                        className="text-blue-500 hover:underline"
-                                                        target="_blank"
-                                                        rel="noopener noreferrer"
-                                                    >
-                                                        Read more
-                                                    </a>
-                                                </li>
-                                            ))
-                                        ) : (
-                                            <div className="text-center text-gray-600">No SNS data available</div>
-                                        )}
-                                    </ul>
+                                    <FeedList feeds={snsFeeds}/>
                                 )}
                             </div>
                         </div>

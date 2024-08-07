@@ -26,10 +26,21 @@ class FeedService {
             return null;
         }
     }
+    async lastFetchFeed(){
+        try {
+            const response = await this.api.get('/lastFetchFeed');
+            return response.data;
+        } catch (error) {
+            console.log('Axios error:', error.response ? error.response.data : error.message);
+            return null;
+        }
+    }
     async createFeed(feedData) {
-        const response = await axios.post('/api/feed/store', feedData);
+        const response = await this.api.post('/feed/store', feedData);
         return response.data;
     }
+
+
 }
 
 export default new FeedService();
