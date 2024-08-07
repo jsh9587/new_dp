@@ -6,7 +6,14 @@ import '@toast-ui/editor/dist/toastui-editor.css';
 import Editor from '@toast-ui/editor';
 export default function FeedStorePage({ auth }) {
     const editorRef = useRef(null);
-
+    const [editorInstance, setEditorInstance] = useState(null);
+    const [formData, setFormData] = useState({
+        type: '',
+        title: '',
+        slug: '',
+        content: '',
+        media_url: '',
+    });
     useEffect(()=>{
         // DOM 요소가 렌더링된 후에 에디터를 초기화합니다.
         if (editorRef.current) {
@@ -16,33 +23,14 @@ export default function FeedStorePage({ auth }) {
                 initialEditType: 'markdown',
                 previewStyle: 'vertical',
             });
-
-            // 예시: 에디터의 마크다운 콘텐츠를 가져오는 함수
-            const getMarkdownContent = () => {
-                console.log(editorInstance.getMarkdown());
-            };
-
-            // 예를 들어, 버튼 클릭 시 마크다운 콘텐츠를 로그에 출력하도록 할 수 있습니다.
-            const button = document.createElement('button');
-            button.innerText = 'Get Markdown';
-            button.addEventListener('click', getMarkdownContent);
-            document.body.appendChild(button);
-
-            // Cleanup the button on component unmount
+            setEditorInstance(editorInstance)
             return () => {
-                button.removeEventListener('click', getMarkdownContent);
-                document.body.removeChild(button);
+                editorInstance.destroy();
             };
         }
     }, []);// 빈 배열로 초기 렌더링 시에만 실행되도록 설정
 
-    const [formData, setFormData] = useState({
-        type: '',
-        title: '',
-        slug: '',
-        content: '',
-        media_url: '',
-    });
+
 
     const handleChange = (e) => {
         setFormData({
@@ -53,7 +41,16 @@ export default function FeedStorePage({ auth }) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        Inertia.post('/admin/feeds', formData);
+        if(editorInstance){
+            const content = editorInstance.getMarkdown();
+            const updateFormData = {
+                ...formData,
+                content,
+            };
+        }
+        console.log(updateFormData);
+        return false;
+        Inertia.post('/admin/feeds', updateFormData);
     };
 
     return (
@@ -116,13 +113,13 @@ export default function FeedStorePage({ auth }) {
                                     <label htmlFor="content" className="block font-medium text-sm text-gray-700">
                                         Content
                                     </label>
-                                    <textarea
-                                        id="content"
-                                        rows="4"
-                                        value={formData.content}
-                                        onChange={handleChange}
-                                        className="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm mt-1 block w-full"
-                                    />
+                                    {/*<textarea*/}
+                                    {/*    id="content"*/}
+                                    {/*    rows="4"*/}
+                                    {/*    value={formData.content}*/}
+                                    {/*    onChange={handleChange}*/}
+                                    {/*    className="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm mt-1 block w-full"*/}
+                                    {/*/>*/}
                                 </div>
                                 <div>
                                     <label htmlFor="media_url" className="block font-medium text-sm text-gray-700">

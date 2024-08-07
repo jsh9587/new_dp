@@ -5,23 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9d71ee7-34fc-45e5-81ce-17834dbb405f" name="변경" comment="20240807&#10;1. lastFetchFeed &#10;PHP Route,Controller,Service &#10;React Service, index &#10;&#10;라라벨과 리엑트의 날짜 데이터 출력값이 상이하여 &#10;formatDateWithTimezone 함수로 포메팅&#10;&#10;2. Store&#10;NPM 으로 TOAST-UI EDITOR 설치">
+      <change beforePath="$PROJECT_DIR$/.idea/phpspec.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpspec.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-dp/app/Http/Controllers/Admin/FeedController.php" beforeDir="false" afterPath="$PROJECT_DIR$/new-dp/app/Http/Controllers/Admin/FeedController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-dp/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/new-dp/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-dp/app/Services/Feed/FeedListService.php" beforeDir="false" afterPath="$PROJECT_DIR$/new-dp/app/Services/Feed/FeedListService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-dp/app/Services/Feed/FeedService.php" beforeDir="false" afterPath="$PROJECT_DIR$/new-dp/app/Services/Feed/FeedService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-dp/app/Services/Feed/RssService.php" beforeDir="false" afterPath="$PROJECT_DIR$/new-dp/app/Services/Feed/RssService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-dp/config/logging.php" beforeDir="false" afterPath="$PROJECT_DIR$/new-dp/config/logging.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-dp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/new-dp/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-dp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/new-dp/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-dp/resources/js/Components/Admin/Feed/FetchNewsButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/new-dp/resources/js/Components/Admin/Feed/FetchNewsButton.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-dp/resources/js/Components/Admin/Feed/News.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/new-dp/resources/js/Components/Admin/Feed/Feed.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-dp/resources/js/Components/Admin/Feed/NewsList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/new-dp/resources/js/Components/Admin/Feed/FeedList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-dp/resources/js/Pages/Admin/Feed/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/new-dp/resources/js/Pages/Admin/Feed/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-dp/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/new-dp/.env.example" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/new-dp/resources/js/Pages/Admin/Feed/store.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/new-dp/resources/js/Pages/Admin/Feed/store.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-dp/resources/js/Services/Feed/FeedService.js" beforeDir="false" afterPath="$PROJECT_DIR$/new-dp/resources/js/Services/Feed/FeedService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-dp/routes/console.php" beforeDir="false" afterPath="$PROJECT_DIR$/new-dp/routes/console.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-dp/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/new-dp/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,10 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PerforceDirect.Settings">
-    <option name="CHARSET" value="없음" />
-  </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\xampp\php\php.exe">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\Users\User\OneDrive\바탕 화면\DEV\php-8.3.10-Win32-vs16-x64\php.exe">
     <include_path>
       <path value="$PROJECT_DIR$/new-dp/vendor/league/commonmark" />
       <path value="$PROJECT_DIR$/new-dp/vendor/league/config" />
@@ -170,16 +154,22 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/User/OneDrive/바탕 화면/DEV/new_dp/new-dp",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "web.server",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PhpStorm 2024.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\OneDrive\바탕 화면\DEV\new_dp\new-dp" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="메인" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner configuration_file="$PROJECT_DIR$/new-dp/phpunit.xml" scope="XML" use_alternative_configuration_file="true" />
@@ -209,6 +199,7 @@
       <workItem from="1722947456179" duration="744000" />
       <workItem from="1722948222018" duration="1362000" />
       <workItem from="1722949613921" duration="166000" />
+      <workItem from="1723031526659" duration="5811000" />
     </task>
     <servers />
   </component>
