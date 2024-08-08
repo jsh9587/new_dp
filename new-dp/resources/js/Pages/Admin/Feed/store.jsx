@@ -48,10 +48,16 @@ export default function FeedStorePage({ auth }) {
                 ...formData,
                 content,
             };
-            console.log(updateFormData);
             try{
                 const createResponse = await FeedService.createFeed(updateFormData);
-                //Inertia.post('/api/feed/store',updateFormData);
+                // Check if the response status is 201
+                if (createResponse.status === 201) {
+                    // Handle success
+                   Inertia.visit('/Admin/Feed');
+                } else {
+                    // Handle unexpected status codes
+                    console.log('Unexpected status code:', createResponse.status);
+                }
             } catch ( error ){
                 console.log(error);
             }finally {

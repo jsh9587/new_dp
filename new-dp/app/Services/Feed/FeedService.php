@@ -10,7 +10,6 @@ class FeedService
     public function getFeeds()
     {
         return Feed::orderBy('updated_at','desc')->get();
-
     }
 
     public function getFeed($id)
@@ -20,8 +19,7 @@ class FeedService
 
     public function store($request)
     {
-        $feed = Feed::create($request->all());
-        return $feed;
+        return  Feed::create($request);
     }
 
 }

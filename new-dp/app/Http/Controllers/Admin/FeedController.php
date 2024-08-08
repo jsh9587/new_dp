@@ -36,7 +36,9 @@ class FeedController extends Controller
 
         // Add the user_id to the validated data
         $validatedData['user_id'] = $user->id;
-
+        !isset($request->media_url)?
+            $validatedData['media_url'] = '' :
+            $validatedData['media_url'] = $request->media_url;
         // Call the store method of FeedListService with the updated data
         $feed = $this->feedListService->store($validatedData);
 
