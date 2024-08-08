@@ -44,8 +44,11 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/api/feeds', [FeedController::class, 'getFeeds']);
 Route::get('/api/feeds/{id}', [FeedController::class, 'getFeed']);
-Route::post('/api/feed/store', [FeedController::class, 'store']);
 Route::get('/api/lastFetchFeed',[FeedController::class, 'lastFetchFeed']);
 Route::get('/api/rss-fetch', [RssService::class, 'saveFeeds']);
+
+Route::middleware('auth')->group(function () {
+    Route::post('/api/feed/store', [FeedController::class, 'store']);
+});
 
 require __DIR__.'/auth.php';

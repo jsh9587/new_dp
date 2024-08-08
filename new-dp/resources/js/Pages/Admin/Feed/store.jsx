@@ -4,6 +4,7 @@ import { Head } from '@inertiajs/react';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import '@toast-ui/editor/dist/toastui-editor.css';
 import Editor from '@toast-ui/editor';
+import FeedService  from "@/Services/Feed/FeedService";
 export default function FeedStorePage({ auth }) {
     const editorRef = useRef(null);
     const [editorInstance, setEditorInstance] = useState(null);
@@ -39,7 +40,7 @@ export default function FeedStorePage({ auth }) {
         });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         if(editorInstance){
             const content = editorInstance.getMarkdown();
@@ -47,10 +48,17 @@ export default function FeedStorePage({ auth }) {
                 ...formData,
                 content,
             };
+            console.log(updateFormData);
+            try{
+                const createResponse = await FeedService.createFeed(updateFormData);
+                //Inertia.post('/api/feed/store',updateFormData);
+            } catch ( error ){
+                console.log(error);
+            }finally {
+
+            }
         }
-        console.log(updateFormData);
-        return false;
-        Inertia.post('/admin/feeds', updateFormData);
+
     };
 
     return (

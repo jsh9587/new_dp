@@ -1,11 +1,12 @@
 <?php
-
 namespace App\Http\Controllers\Admin;
+
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Auth;
 use App\Services\Feed\FeedListService;
-
+use App\Http\Requests\Admin\Feed\FeedStoreRequest;
 class FeedController extends Controller
 {
     //
@@ -27,10 +28,20 @@ class FeedController extends Controller
         return response()->json($feed);
     }
 
-    public function store(Request $request)
+    public function store(FeedStoreRequest $request)
     {
-        $feed = $this->feedListService->store($request);
-        return response()->json($feed);
+        $user = $request->user(); // Get the currently authenticated user
+
+        $validatedData = $request->validated(); // Get validated data from the request
+
+        // Add the user_id to the validated data
+        $validatedData['user_id'] = $user->id;
+
+        // Call the store method of FeedListService with the updated data
+        $feed = $this->feedListService->store($validatedData);
+
+        // Return the response with the created feed
+        return response()->json($feed, 201);
     }
 
     public function lastFetchFeed()

@@ -7,8 +7,16 @@
     <list default="true" id="e9d71ee7-34fc-45e5-81ce-17834dbb405f" name="변경" comment="20240807&#10;1. lastFetchFeed &#10;PHP Route,Controller,Service &#10;React Service, index &#10;&#10;라라벨과 리엑트의 날짜 데이터 출력값이 상이하여 &#10;formatDateWithTimezone 함수로 포메팅&#10;&#10;2. Store&#10;NPM 으로 TOAST-UI EDITOR 설치">
       <change beforePath="$PROJECT_DIR$/.idea/phpspec.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpspec.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-dp/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/new-dp/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-dp/app/Http/Controllers/Admin/FeedController.php" beforeDir="false" afterPath="$PROJECT_DIR$/new-dp/app/Http/Controllers/Admin/FeedController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-dp/app/Http/Requests/Admin/Feed/FeedStoreRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/new-dp/app/Http/Requests/Admin/Feed/FeedStoreRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-dp/app/Services/Feed/FeedListService.php" beforeDir="false" afterPath="$PROJECT_DIR$/new-dp/app/Services/Feed/FeedListService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-dp/app/Services/Feed/FeedService.php" beforeDir="false" afterPath="$PROJECT_DIR$/new-dp/app/Services/Feed/FeedService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-dp/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/new-dp/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-dp/resources/js/Pages/Admin/Feed/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/new-dp/resources/js/Pages/Admin/Feed/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/new-dp/resources/js/Pages/Admin/Feed/store.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/new-dp/resources/js/Pages/Admin/Feed/store.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-dp/resources/js/Services/Feed/FeedService.js" beforeDir="false" afterPath="$PROJECT_DIR$/new-dp/resources/js/Services/Feed/FeedService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-dp/resources/views/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/new-dp/resources/views/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-dp/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/new-dp/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +32,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\Users\User\OneDrive\바탕 화면\DEV\php-8.3.10-Win32-vs16-x64\php.exe">
+  <component name="PerforceDirect.Settings">
+    <option name="CHARSET" value="없음" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\xampp\php\php.exe">
     <include_path>
       <path value="$PROJECT_DIR$/new-dp/vendor/league/commonmark" />
       <path value="$PROJECT_DIR$/new-dp/vendor/league/config" />
@@ -144,17 +155,20 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2kHhjbJXUl03EVpAKXGpzjjY1te" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/User/OneDrive/바탕 화면/DEV/new_dp/new-dp",
+    "last_opened_file_path": "C:/Users/jsh/PhpstormProjects/new_dp/new-dp",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -167,6 +181,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jsh\PhpstormProjects\new_dp\new-dp" />
       <recent name="C:\Users\User\OneDrive\바탕 화면\DEV\new_dp\new-dp" />
     </key>
   </component>
@@ -200,6 +215,7 @@
       <workItem from="1722948222018" duration="1362000" />
       <workItem from="1722949613921" duration="166000" />
       <workItem from="1723031526659" duration="5811000" />
+      <workItem from="1723075734657" duration="15731000" />
     </task>
     <servers />
   </component>
@@ -207,6 +223,7 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="20240802" />
     <MESSAGE value="20240807&#10;1. lastFetchFeed &#10;PHP Route,Controller,Service &#10;React Service, index &#10;&#10;라라벨과 리엑트의 날짜 데이터 출력값이 상이하여 &#10;formatDateWithTimezone 함수로 포메팅&#10;&#10;2. Store&#10;NPM 으로 TOAST-UI EDITOR 설치" />
     <option name="LAST_COMMIT_MESSAGE" value="20240807&#10;1. lastFetchFeed &#10;PHP Route,Controller,Service &#10;React Service, index &#10;&#10;라라벨과 리엑트의 날짜 데이터 출력값이 상이하여 &#10;formatDateWithTimezone 함수로 포메팅&#10;&#10;2. Store&#10;NPM 으로 TOAST-UI EDITOR 설치" />

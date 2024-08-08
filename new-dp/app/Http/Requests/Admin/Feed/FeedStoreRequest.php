@@ -3,7 +3,7 @@
 namespace App\Http\Requests\Admin\Feed;
 
 use Illuminate\Foundation\Http\FormRequest;
-
+use Illuminate\Support\Str;
 class FeedStoreRequest extends FormRequest
 {
     /**
@@ -11,7 +11,7 @@ class FeedStoreRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,6 +23,22 @@ class FeedStoreRequest extends FormRequest
     {
         return [
             //
+            'type' => 'required|string',
+//            'user_id' => 'required|integer',
+            'title' => 'required|string',
+            'slug' => 'required|string',
+            'content' => 'required|string',
+            'media_url' => 'nullable|string'
         ];
     }
+
+    /**
+     * Prepare the data for validation.
+     */
+//    protected function prepareForValidation(): void
+//    {
+//        $this->merge([
+//            'slug' => Str::slug($this->slug),
+//        ]);
+//    }
 }

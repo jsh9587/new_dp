@@ -23,19 +23,38 @@ export default function FeedIndexPage({ auth }) {
 
     const formatDateWithTimezone = (dateString, timeZone = 'Asia/Seoul') => {
         const date = new Date(dateString);
-        const year = date.getUTCFullYear();
-        const month = String(date.getUTCMonth() + 1).padStart(2, '0');
-        const day = String(date.getUTCDate()).padStart(2, '0');
-        const hour = String(date.getUTCHours()).padStart(2, '0');
-        const minute = String(date.getUTCMinutes()).padStart(2, '0');
-        const second = String(date.getUTCSeconds()).padStart(2, '0');
+
+        // Use Intl.DateTimeFormat to format the date according to the specified time zone
+        const options = {
+            timeZone,
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: false // 24-hour time format
+        };
+
+        const formatter = new Intl.DateTimeFormat('en-GB', options); // 'en-GB' is used for date format (e.g., DD/MM/YYYY)
+        const parts = formatter.formatToParts(date);
+
+        const year = parts.find(part => part.type === 'year').value;
+        const month = parts.find(part => part.type === 'month').value;
+        const day = parts.find(part => part.type === 'day').value;
+        const hour = parts.find(part => part.type === 'hour').value;
+        const minute = parts.find(part => part.type === 'minute').value;
+        const second = parts.find(part => part.type === 'second').value;
+
         return `${year}-${month}-${day} ${hour}:${minute}:${second}`;
     };
+
 
     const lastFetchFeed = async ()=> {
         try {
             const lastFeed = await FeedService.lastFetchFeed();
             lastFeed.updated_at = formatDateWithTimezone(lastFeed.updated_at);
+            console.log(lastFeed);
             setLastFeed(lastFeed);
         } catch ( error ) {
             console.log(error);
