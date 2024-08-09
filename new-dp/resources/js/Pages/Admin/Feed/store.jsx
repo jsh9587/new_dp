@@ -1,7 +1,7 @@
+import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import React, { useEffect,useRef,useState } from 'react';
 import { Inertia } from '@inertiajs/inertia';
 import { Head } from '@inertiajs/react';
-import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import '@toast-ui/editor/dist/toastui-editor.css';
 import Editor from '@toast-ui/editor';
 import FeedService  from "@/Services/Feed/FeedService";
@@ -42,13 +42,13 @@ export default function FeedStorePage({ auth }) {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        if(editorInstance){
+        if (editorInstance) {
             const content = editorInstance.getMarkdown();
             const updateFormData = {
                 ...formData,
                 content,
             };
-            try{
+            try {
                 const createResponse = await FeedService.createFeed(updateFormData);
                 // Check if the response status is 201
                 if (createResponse.status === 201) {
@@ -57,14 +57,25 @@ export default function FeedStorePage({ auth }) {
                 } else {
                     // Handle unexpected status codes
                     console.log('Unexpected status code:', createResponse.status);
+                    // Optionally show an error message to the user
                 }
-            } catch ( error ){
-                console.log(error);
-            }finally {
-
+            } catch (error) {
+                if (error.response) {
+                    if (error.response.status === 409) {
+                        // Handle conflict error specifically
+                        console.error('Conflict error:', error.response.data);
+                        // Optionally show an error message to the user
+                    } else {
+                        console.error('Unexpected error:', error.response.data);
+                    }
+                } else if (error.request) {
+                    console.error('No response received:', error.request);
+                } else {
+                    console.error('Error setting up request:', error.message);
+                }
+                return false;
             }
         }
-
     };
 
     return (
@@ -89,14 +100,12 @@ export default function FeedStorePage({ auth }) {
                                     <label htmlFor="type" className="block font-medium text-sm text-gray-700">
                                         Type
                                     </label>
-                                    <input
-                                        id="type"
-                                        type="text"
-                                        required
-                                        value={formData.type}
-                                        onChange={handleChange}
-                                        className="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm mt-1 block w-full"
-                                    />
+                                    <select id="type" onChange={handleChange} value={formData.type}
+                                            className="form-select block w-full mt-1 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                        <option value="">Choose</option>
+                                        <option value="sns">SNS</option>
+                                        <option value="news">NEWS</option>
+                                    </select>
                                 </div>
                                 <div>
                                     <label htmlFor="title" className="block font-medium text-sm text-gray-700">

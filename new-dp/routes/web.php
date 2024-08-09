@@ -32,7 +32,7 @@ Route::get('/Admin/Feed/{id}',function($id){
 
 Route::get('/Admin/Sns/Store',function(){
     return Inertia::render('Admin/Feed/store');
-})->middleware(['auth', 'verified'])->name('admin.feed.store');
+})->middleware(['auth', 'verified']);
 
 
 

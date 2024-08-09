@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9d71ee7-34fc-45e5-81ce-17834dbb405f" name="변경" comment="20240807&#10;1. lastFetchFeed &#10;PHP Route,Controller,Service &#10;React Service, index &#10;&#10;라라벨과 리엑트의 날짜 데이터 출력값이 상이하여 &#10;formatDateWithTimezone 함수로 포메팅&#10;&#10;2. Store&#10;NPM 으로 TOAST-UI EDITOR 설치">
-      <change beforePath="$PROJECT_DIR$/.idea/phpspec.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpspec.xml" afterDir="false" />
+    <list default="true" id="e9d71ee7-34fc-45e5-81ce-17834dbb405f" name="변경" comment="20240807&#10;1 . store.jsx&#10;데이터 넘기기&#10;&#10;2. form request class 생성&#10;&#10;3. 데이터 처리중">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/new-dp/app/Http/Controllers/Admin/FeedController.php" beforeDir="false" afterPath="$PROJECT_DIR$/new-dp/app/Http/Controllers/Admin/FeedController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-dp/app/Services/Feed/FeedService.php" beforeDir="false" afterPath="$PROJECT_DIR$/new-dp/app/Services/Feed/FeedService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-dp/resources/js/Pages/Admin/Feed/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/new-dp/resources/js/Pages/Admin/Feed/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/new-dp/resources/js/Pages/Admin/Feed/store.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/new-dp/resources/js/Pages/Admin/Feed/store.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-dp/resources/js/Services/Feed/FeedService.js" beforeDir="false" afterPath="$PROJECT_DIR$/new-dp/resources/js/Services/Feed/FeedService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-dp/resources/js/app.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/new-dp/resources/js/app.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-dp/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/new-dp/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +27,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\Users\User\OneDrive\바탕 화면\DEV\php-8.3.10-Win32-vs16-x64\php.exe">
+  <component name="PerforceDirect.Settings">
+    <option name="CHARSET" value="없음" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\xampp\php\php.exe">
     <include_path>
       <path value="$PROJECT_DIR$/new-dp/vendor/league/commonmark" />
       <path value="$PROJECT_DIR$/new-dp/vendor/league/config" />
@@ -152,23 +157,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/User/OneDrive/바탕 화면/DEV/new_dp/new-dp",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PhpStorm 2024.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/OneDrive/바탕 화면/DEV/new_dp/new-dp&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\PhpStorm 2024.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\User\OneDrive\바탕 화면\DEV\new_dp\new-dp" />

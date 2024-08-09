@@ -90,7 +90,7 @@ export default function FeedIndexPage({ auth }) {
 
     const handleSnsStore =  ()=>{
         setLoading(true);
-        Inertia.visit('/Admin/Sns/Store');
+        return Inertia.visit('/Admin/Sns/Store');
     }
 
 
@@ -127,6 +127,10 @@ export default function FeedIndexPage({ auth }) {
                                 <div className="flex items-center justify-between mb-4">
                                     <h3 className="text-2xl font-bold">SNS</h3>
                                     <InputSnsButton onClick={handleSnsStore}/>
+                                    {/*<a className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"*/}
+                                    {/*        href={route('admin.feed.store')}>*/}
+                                    {/*    갱신*/}
+                                    {/*</a>*/}
                                 </div>
                                 {loading ? (
                                     <div className="text-center text-gray-600">Loading...</div>

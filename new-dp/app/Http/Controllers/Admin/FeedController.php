@@ -36,14 +36,16 @@ class FeedController extends Controller
 
         // Add the user_id to the validated data
         $validatedData['user_id'] = $user->id;
-        !isset($request->media_url)?
-            $validatedData['media_url'] = '' :
-            $validatedData['media_url'] = $request->media_url;
-        // Call the store method of FeedListService with the updated data
-        $feed = $this->feedListService->store($validatedData);
+        $validatedData['media_url'] = $request->media_url ?? ''; // Handle media_url with a fallback
 
-        // Return the response with the created feed
-        return response()->json($feed, 201);
+        try {
+            $feed = $this->feedListService->store($validatedData);
+            return response()->json($feed, 201);
+        } catch (\Exception $e) {
+            // Log the error and return a 409 status code with an error message
+            \Log::error('Feed creation failed: ' . $e->getMessage());
+            return response()->json(['error' => 'Conflict'], 409);
+        }
     }
 
     public function lastFetchFeed()
